@@ -38,6 +38,7 @@ has '_full_lookup_url'                => (is => 'rw', isa => 'Str', lazy => 1, b
 has '_species'    => (is => 'rw', isa => 'Maybe[Str]');
 has '_taxon_id'   => (is => 'rw', isa => 'Maybe[Int]');
 has '_lineage'    => (is => 'rw', isa => 'ArrayRef', default => sub { [] } );
+has '_pubmed_ids' => (is => 'rw', isa => 'ArrayRef', default => sub { [] } );
 
 sub _build__full_lookup_url
 {
@@ -56,6 +57,41 @@ sub _build_accession_metadata
     $accession_metadata_obj = $self->_remote_lookup_accession_metadata($full_query);
   }
   return $accession_metadata_obj;
+}
+
+sub _get_pubmed_id
+{
+  my ($self, $reference) = @_;
+  if(defined($reference->{xref}) && defined($reference->{xref}->{'-db'}) && defined($reference->{xref}->{'-id'}) )
+  {
+    return $reference->{xref}->{'-id'};
+  }
+  return undef;
+}
+
+sub _populate_reference_metadata
+{
+  my ($self, $tree) = @_;
+  my @pubmed_ids;
+  
+  if(ref($tree->{reference}) && $tree->{reference} =~ /ARRAY/)
+  {
+    for my $reference (@{$tree->{reference}})
+    {
+      my $pubmed_id = $self->_get_pubmed_id($reference);
+      push(@pubmed_ids,$pubmed_id) if(defined($pubmed_id));
+    }
+  }
+  else
+  {
+    my $pubmed_id = $self->_get_pubmed_id($tree->{reference});
+    push(@pubmed_ids,$pubmed_id) if(defined($pubmed_id));
+  }
+  
+  # Theres a lot more meta data in the referenes section that we dont look at yet, but we might, so this isnt a builder in its own right.
+  $self->_pubmed_ids(\@pubmed_ids);
+
+  return undef;
 }
 
 sub _populate_species_metadata
@@ -112,12 +148,14 @@ sub _parse_xml_and_return_gene_metadata
    my ($self, $tree) = @_;
 
    $self->_populate_species_metadata($tree->{ROOT}->{entry});
+   $self->_populate_reference_metadata($tree->{ROOT}->{entry});
    
    my $accession_metadata_obj = Bio::Resistome::GeneMetaData->new(
      accession_number => $self->accession_number,
-     species  => $self->_species,
-     taxon_id => $self->_taxon_id,
-     lineage  => $self->_lineage,
+     species          => $self->_species,
+     taxon_id         => $self->_taxon_id,
+     lineage          => $self->_lineage,
+     pubmed_ids       => $self->_pubmed_ids
    );
    
    return $accession_metadata_obj;

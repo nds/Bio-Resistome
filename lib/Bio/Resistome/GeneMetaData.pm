@@ -25,7 +25,9 @@ use Moose;
 has 'accession_number' => (is => 'ro', isa => 'Str', required => 1);
 has 'species'          => (is => 'ro', isa => 'Maybe[Str]');
 has 'taxon_id'         => (is => 'ro', isa => 'Maybe[Int]');
-has 'lineage'          => (is => 'ro', isa => 'Maybe[ArrayRef]');
+has 'lineage'          => (is => 'ro', isa => 'ArrayRef');
+has 'pubmed_ids'       => (is => 'ro', isa => 'ArrayRef');
+
 
 no Moose;
 __PACKAGE__->meta->make_immutable;
