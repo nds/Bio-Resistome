@@ -30,7 +30,7 @@ use Bio::Resistome::EMBL::Exceptions;
 use Bio::Resistome::GeneMetaData;
 
 has 'accession_number'                => ( is => 'ro', isa => 'Str', required => 1 );
-has 'accession_number_lookup_service' => ( is => 'ro', isa => 'Str', default  => 'http://www.ebi.ac.uk/ena/data/view/U41471&display=xml' );
+has 'accession_number_lookup_service' => ( is => 'ro', isa => 'Str', default  => 'http://www.ebi.ac.uk/ena/data/view/' );
 
 has 'accession_metadata'              => (is => 'rw', isa => 'Bio::Resistome::GeneMetaData', lazy => 1, builder => '_build_accession_metadata');
 has '_full_lookup_url'                => (is => 'rw', isa => 'Str', lazy => 1, builder => '_build__full_lookup_url');
@@ -39,6 +39,7 @@ has '_species'    => (is => 'rw', isa => 'Maybe[Str]');
 has '_taxon_id'   => (is => 'rw', isa => 'Maybe[Int]');
 has '_lineage'    => (is => 'rw', isa => 'ArrayRef', default => sub { [] } );
 has '_pubmed_ids' => (is => 'rw', isa => 'ArrayRef', default => sub { [] } );
+has '_description' => (is => 'rw', isa => 'Maybe[Str]');
 
 sub _build__full_lookup_url
 {
@@ -59,12 +60,29 @@ sub _build_accession_metadata
   return $accession_metadata_obj;
 }
 
+sub _populate_description_metadata
+{
+   my ($self, $tree) = @_;
+   return $self if(!(defined($tree->{description})));
+   
+   if(ref($tree->{description}) && $tree->{description} =~ /ARRAY/)
+   {
+     Bio::Resistome::EMBL::Exceptions::MoreThanOneDescription->throw(error => "Theres more than 1 description which shouldnt happen for ".$self->accession_number);
+   }
+   else
+   {
+     $self->_description($tree->{description});
+   }
+   return $self;
+}
+
 sub _get_pubmed_id
 {
-  my ($self, $reference) = @_;
-  if(defined($reference->{xref}) && defined($reference->{xref}->{'-db'}) && defined($reference->{xref}->{'-id'}) )
+  my ($self, $xref) = @_;
+
+  if(defined($xref) && defined($xref->{'-db'}) && $xref->{'-db'} eq 'PUBMED' && defined($xref->{'-id'}) )
   {
-    return $reference->{xref}->{'-id'};
+    return $xref->{'-id'};
   }
   return undef;
 }
@@ -78,8 +96,20 @@ sub _populate_reference_metadata
   {
     for my $reference (@{$tree->{reference}})
     {
-      my $pubmed_id = $self->_get_pubmed_id($reference);
-      push(@pubmed_ids,$pubmed_id) if(defined($pubmed_id));
+      next if(! defined($reference->{xref}));
+      if( $reference->{xref} =~ /ARRAY/)
+      {
+        for my $xref (@{$reference->{xref}})
+        {
+          my $pubmed_id = $self->_get_pubmed_id($xref);
+          push(@pubmed_ids,$pubmed_id) if(defined($pubmed_id));
+        }  
+      }
+      else
+      {
+        my $pubmed_id = $self->_get_pubmed_id($reference->{xref} );
+        push(@pubmed_ids,$pubmed_id) if(defined($pubmed_id));
+      }
     }
   }
   else
@@ -91,7 +121,7 @@ sub _populate_reference_metadata
   # Theres a lot more meta data in the referenes section that we dont look at yet, but we might, so this isnt a builder in its own right.
   $self->_pubmed_ids(\@pubmed_ids);
 
-  return undef;
+  return $self;
 }
 
 sub _populate_species_metadata
@@ -106,7 +136,7 @@ sub _populate_species_metadata
       if(defined($feature->{taxon}))
       {
         $self->_populate_feature_species_details($feature);
-        return;
+        return $self;
       }
     }
   }
@@ -114,7 +144,7 @@ sub _populate_species_metadata
   {
     $self->_populate_feature_species_details($tree->{feature});
   }
-  return undef;
+  return $self;
 }
 
 sub _populate_feature_species_details
@@ -140,22 +170,27 @@ sub _populate_feature_species_details
       }
     }
   }
-  return undef;
+  return $self;
 }
 
 sub _parse_xml_and_return_gene_metadata
 {
    my ($self, $tree) = @_;
 
-   $self->_populate_species_metadata($tree->{ROOT}->{entry});
-   $self->_populate_reference_metadata($tree->{ROOT}->{entry});
-   
+   if(defined($tree) && defined($tree->{ROOT}) && defined($tree->{ROOT}->{entry}) )
+   {
+     $self->_populate_species_metadata($tree->{ROOT}->{entry});
+     $self->_populate_reference_metadata($tree->{ROOT}->{entry});
+     $self->_populate_description_metadata($tree->{ROOT}->{entry});
+   }
+
    my $accession_metadata_obj = Bio::Resistome::GeneMetaData->new(
      accession_number => $self->accession_number,
      species          => $self->_species,
      taxon_id         => $self->_taxon_id,
      lineage          => $self->_lineage,
-     pubmed_ids       => $self->_pubmed_ids
+     pubmed_ids       => $self->_pubmed_ids,
+     description      => $self->_description,
    );
    
    return $accession_metadata_obj;
