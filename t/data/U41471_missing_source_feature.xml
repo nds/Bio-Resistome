@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT request="U41471&amp;display=xml"><entry accession="U41471" version="1" entryVersion="3" dataClass="STD" taxonomicDivision="PRO" moleculeType="genomic DNA" sequenceLength="957" topology="linear" firstPublic="1996-04-05" firstPublicRelease="47" lastUpdated="2005-04-17" lastUpdatedRelease="83">
+	<description>Mycobacterium fortuitum aminoglycoside 2&apos;-N-acetyltransferase (aac(2&apos;)-Ib) gene, complete cds.</description>
+	<reference type="article" number="1" location="1-957">
+		<title>Characterization of the chromosomal aminoglycoside 2&apos;-N-acetyltransferase gene from Mycobacterium fortuitum</title>
+		<author>Ainsa J.A.</author>
+		<author>Martin C.</author>
+		<author>Gicquel B.</author>
+		<author>Gomez-Lus R.</author>
+		<journal>Antimicrob. Agents Chemother.</journal>
+		<year>1996</year>
+		<volume>40</volume>
+		<issue>10</issue>
+		<firstPage>2350</firstPage>
+		<lastPage>2355</lastPage>
+		<referenceLocation>
+Antimicrob. Agents Chemother. 40(10):2350-2355(1996).
+		</referenceLocation>
+		<xref db="PUBMED" id="8891143"/>
+	</reference>
+	<reference type="submission" number="2" location="1-957">
+		<author>Ainsa J.A.</author>
+		<author>Martin C.</author>
+		<author>Gomez-Lus R.</author>
+		<submissionDate>1995-11-29</submissionDate>
+		<referenceLocation>
+Submitted (29-NOV-1995) to the INSDC.
+Jose A. Ainsa, Microbiology, University of Zaragoza, C/ Domingo Miral s/n,
+Zaragoza, 50009, Spain
+		</referenceLocation>
+	</reference>
+<feature name="CDS" location="265..852">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+aac(2&apos;)-Ib
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+AAC(2&apos;)-Ib
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+aminoglycoside 2&apos;-N-acetyltransferase
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAC44793.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MPFQDVSAPVRGGILHTARLVHTSDLDQETREGARRMVIEAFEGDFSDADWEHALGGMHAFICHHGALIAHAAVVQRRLL
+YRDTALRCGYVEAVAVREDWRGQGLATAVMDAVEQVLRGAYQLGALSASDTARGMYLSRGWLPWQGPTSVLQPAGVTRTP
+EDDEGLFVLPVGLPAGMELDTTAEITCDWRDGDVW
+			</value>
+		</qualifier>
+	</feature>
+	<sequence>
+gatcggcgtggtgaccgacgaggacatcgacaagctgggacaggtccggccgggccaaac
+ggtccgattgcactgggcgcacccccgccgaccgttcgagggttagtcgcctgggccatt
+ccggtcgtcgttttctccgtcacggtcggattccgccggcgattaccgacccaggcgtgg
+aaagcggcgccccgggcgctctgcctaggcgctgggcgacccacacgtgcagacaccggc
+gcgcggcgctggtagaacaagggtgtgcctttccaggatgtcagcgcgcccgttcgaggc
+gggatcctgcacaccgctcgactcgtccacacctccgatctcgatcaggagactcgagag
+ggcgcccgccgcatggtcatcgaggcgttcgagggtgatttcagcgacgccgactgggag
+cacgcgctcggtggcatgcacgccttcatctgtcaccacggcgctctgatcgcgcatgcc
+gcggtggtccagcgccggctgctctaccgcgacaccgcgctgcgctgcgggtacgtggaa
+gccgtggcggtgcgcgaagattggcgcggccaaggcctggccaccgccgtcatggacgcg
+gtcgaacaggtgctgcgcggcgcctaccagctcggcgccctcagtgcgtccgacacagcc
+agaggcatgtacctctctcgcgggtggctgccgtggcaggggccgacctcggtgctgcag
+ccggccggcgtgacgcgtacacccgaggacgacgagggactgttcgtgctgcccgtcggt
+ctcccggcgggaatggaactcgacaccacagccgagatcacctgcgactggcgcgacggg
+gacgtctggtaaccaccagaaggcacagggctcacacccttggatgtgagcgggtgagcg
+gaatttcacggccgggtcaccgcacagcgcattcgggcaataaacgcttcctacgtt
+	</sequence>
+</entry>
+</ROOT>

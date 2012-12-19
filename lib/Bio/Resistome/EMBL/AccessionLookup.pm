@@ -37,7 +37,7 @@ has '_full_lookup_url'                => (is => 'rw', isa => 'Str', lazy => 1, b
 
 has '_species'    => (is => 'rw', isa => 'Maybe[Str]');
 has '_taxon_id'   => (is => 'rw', isa => 'Maybe[Int]');
-has '_lineage'    => (is => 'rw', isa => 'Maybe[ArrayRef]');
+has '_lineage'    => (is => 'rw', isa => 'ArrayRef', default => sub { [] } );
 
 sub _build__full_lookup_url
 {
@@ -84,17 +84,19 @@ sub _populate_species_metadata
 sub _populate_feature_species_details
 {
   my ($self, $feature) = @_;
+  
   if(defined($feature->{taxon}))
   {
+
     $self->_species($feature->{taxon}->{'-scientificName'}) if(defined($feature->{taxon}->{'-scientificName'}));
     $self->_taxon_id($feature->{taxon}->{'-taxId'}) if(defined($feature->{taxon}->{'-taxId'}));
     
-    if(defined($feature->{taxon}->{lineage}))
+    if(defined($feature->{taxon}->{lineage}) && defined($feature->{taxon}->{lineage}->{taxon}))
     {
       my @lineages;
-      if(ref($feature->{taxon}->{lineage}) && $feature->{taxon}->{lineage} =~ /ARRAY/)
+      if(ref($feature->{taxon}->{lineage}->{taxon}) && $feature->{taxon}->{lineage}->{taxon} =~ /ARRAY/)
       {
-        for my $lineage (@{$feature->{taxon}->{lineage}})
+        for my $lineage (@{$feature->{taxon}->{lineage}->{taxon}})
         {
           push(@lineages, $lineage->{'-scientificName'}) if(defined($lineage->{'-scientificName'}));
         }
@@ -108,7 +110,8 @@ sub _populate_feature_species_details
 sub _parse_xml_and_return_gene_metadata
 {
    my ($self, $tree) = @_;
-   $self->_get_species_metadata($tree);
+
+   $self->_populate_species_metadata($tree->{ROOT}->{entry});
    
    my $accession_metadata_obj = Bio::Resistome::GeneMetaData->new(
      accession_number => $self->accession_number,
