@@ -13,12 +13,14 @@ BEGIN { unshift( @INC, '../lib' ) }
 use Moose;
 use Getopt::Long;
 use Bio::Resistome::Accessions;
+use Bio::Resistome::Spreadsheet::LookupAccessions;
+use Bio::Resistome::Input::FileOnePerLine;
 
-
-my ($input_file, $help );
+my ($input_file, $output_file, $help );
 
 GetOptions(
     'i|input_file=s'    => \$input_file,
+    'o|output_file=s'   => \$output_file,
     'h|help'            => \$help,
 );
 
@@ -34,23 +36,14 @@ lookup_accession_metadata -h
 
 USAGE
 
+$output_file ||= 'lookup_accessions.csv';
 
-open(my $fh, $input_file) or die 'Couldnt open input file';
-my @accession_numbers;
-while(<$fh>)
-{
-  chomp;
-  push(@accession_numbers, $_);
-}
+my $input_file_parser = Bio::Resistome::Input::FileOnePerLine->new(filename => $input_file);
+my $accessions_obj = Bio::Resistome::Accessions->new(accession_numbers => $input_file_parser->file_line_data);
 
-my $obj = Bio::Resistome::Accessions->new(
-  accession_numbers => \@accession_numbers
+my $spreadsheet_row_obj = Bio::Resistome::Spreadsheet::LookupAccessions->new(
+  genes_metadata => $accessions_obj->accessions_metadata,
+  output_file_name => $output_file
 );
-for my $accession_metadata (@{$obj->accessions_metadata})
-{
-  print $obj->accessions_metadata->accession_number. "\t".
-        $obj->accessions_metadata->species. "\t".
-        $obj->accessions_metadata->taxon_id. "\t".
-        $obj->accessions_metadata->description."\n";
-}
+$spreadsheet_row_obj->create;
 

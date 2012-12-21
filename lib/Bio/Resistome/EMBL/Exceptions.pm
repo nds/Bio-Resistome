@@ -1,4 +1,11 @@
 package Bio::Resistome::EMBL::Exceptions;
+# ABSTRACT: Exceptions for EMBL
+
+=head1 SYNOPSIS
+
+Exceptions for EMBL
+
+=cut
 
 use Exception::Class (
     Bio::Resistome::EMBL::Exceptions::AccessionLookupFailed   => { description => 'Couldnt lookup the accession number metadata' },
