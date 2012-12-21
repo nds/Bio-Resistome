@@ -1,0 +1,15 @@
+Read in a spreadsheet
+-> generically parse the the headers
+-> lookup metadata from accessions, creating gene metadata objects
+
+Create database
+-> populate it (denormalise the data).
+-> versioning
+
+
+dbicdump -o dump_directory=./lib \
+         -o components='["InflateColumn::DateTime"]' \
+         -o debug=1 \
+         Bio::Resistome::Database \
+         'dbi:mysql:dbname=pathogen_resistome' \
+         root

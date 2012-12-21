@@ -28,16 +28,11 @@ Returns the header columns, as an array, suitable for outputting to a CSV file.
 
 
 use Moose;
+with 'Bio::Resistome::ArrayCommon';
 
 has 'gene_metadata'    => ( is => 'ro', isa => 'Bio::Resistome::GeneMetaData',     required => 1 ); 
 has 'formatted_row'    => ( is => 'ro', isa => 'ArrayRef', lazy => 1, builder => '_build_formatted_row'); 
 has 'formatted_header' => ( is => 'ro', isa => 'ArrayRef', lazy => 1, builder => '_build_formatted_header'); 
-
-sub _comma_separate_array_into_a_single_string
-{
-  my ($self,$input_array) = @_;
-  return join(',',@{$input_array});
-}
 
 sub _build_formatted_row
 {
