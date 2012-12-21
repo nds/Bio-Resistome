@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT request="U41471&amp;display=xml"><entry accession="U41471" version="1" entryVersion="3" dataClass="STD" taxonomicDivision="PRO" moleculeType="genomic DNA" sequenceLength="957" topology="linear" firstPublic="1996-04-05" firstPublicRelease="47" lastUpdated="2005-04-17" lastUpdatedRelease="83">
+	<description>Mycobacterium fortuitum aminoglycoside 2&apos;-N-acetyltransferase (aac(2&apos;)-Ib) gene, complete cds.</description>
+	<feature name="source" location="1..957">
+		<taxon scientificName="Mycobacterium fortuitum" taxId="1766">
+			<lineage>
+				<taxon scientificName="Bacteria"/>
+				<taxon scientificName="Actinobacteria"/>
+				<taxon scientificName="Actinobacteridae"/>
+				<taxon scientificName="Actinomycetales"/>
+				<taxon scientificName="Corynebacterineae"/>
+				<taxon scientificName="Mycobacteriaceae"/>
+				<taxon scientificName="Mycobacterium"/>
+			</lineage>
+		</taxon>
+		<qualifier name="organism">
+			<value>
+Mycobacterium fortuitum
+			</value>
+		</qualifier>
+		<qualifier name="strain">
+			<value>
+FC1K
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="265..852">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+aac(2&apos;)-Ib
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+AAC(2&apos;)-Ib
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+aminoglycoside 2&apos;-N-acetyltransferase
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAC44793.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MPFQDVSAPVRGGILHTARLVHTSDLDQETREGARRMVIEAFEGDFSDADWEHALGGMHAFICHHGALIAHAAVVQRRLL
+YRDTALRCGYVEAVAVREDWRGQGLATAVMDAVEQVLRGAYQLGALSASDTARGMYLSRGWLPWQGPTSVLQPAGVTRTP
+EDDEGLFVLPVGLPAGMELDTTAEITCDWRDGDVW
+			</value>
+		</qualifier>
+	</feature>
+	<sequence>
+gatcggcgtggtgaccgacgaggacatcgacaagctgggacaggtccggccgggccaaac
+ggtccgattgcactgggcgcacccccgccgaccgttcgagggttagtcgcctgggccatt
+ccggtcgtcgttttctccgtcacggtcggattccgccggcgattaccgacccaggcgtgg
+aaagcggcgccccgggcgctctgcctaggcgctgggcgacccacacgtgcagacaccggc
+gcgcggcgctggtagaacaagggtgtgcctttccaggatgtcagcgcgcccgttcgaggc
+gggatcctgcacaccgctcgactcgtccacacctccgatctcgatcaggagactcgagag
+ggcgcccgccgcatggtcatcgaggcgttcgagggtgatttcagcgacgccgactgggag
+cacgcgctcggtggcatgcacgccttcatctgtcaccacggcgctctgatcgcgcatgcc
+gcggtggtccagcgccggctgctctaccgcgacaccgcgctgcgctgcgggtacgtggaa
+gccgtggcggtgcgcgaagattggcgcggccaaggcctggccaccgccgtcatggacgcg
+gtcgaacaggtgctgcgcggcgcctaccagctcggcgccctcagtgcgtccgacacagcc
+agaggcatgtacctctctcgcgggtggctgccgtggcaggggccgacctcggtgctgcag
+ccggccggcgtgacgcgtacacccgaggacgacgagggactgttcgtgctgcccgtcggt
+ctcccggcgggaatggaactcgacaccacagccgagatcacctgcgactggcgcgacggg
+gacgtctggtaaccaccagaaggcacagggctcacacccttggatgtgagcgggtgagcg
+gaatttcacggccgggtcaccgcacagcgcattcgggcaataaacgcttcctacgtt
+	</sequence>
+</entry>
+</ROOT>

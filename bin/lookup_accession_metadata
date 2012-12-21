@@ -1,0 +1,49 @@
+#!/usr/bin/env perl
+
+package Bio::Resistome::Bin::LookupAccessionMetadata;
+# ABSTRACT: Take in a list of accession numbers and lookup the metadata in EMBL
+# PODNAME: lookup_accession_metadata
+=head1 SYNOPSIS
+
+Take in a list of accession numbers and lookup the metadata in EMBL
+
+=cut
+
+BEGIN { unshift( @INC, '../lib' ) }
+use Moose;
+use Getopt::Long;
+use Bio::Resistome::Accessions;
+use Bio::Resistome::Spreadsheet::LookupAccessions;
+use Bio::Resistome::Input::FileOnePerLine;
+
+my ($input_file, $output_file, $help );
+
+GetOptions(
+    'i|input_file=s'    => \$input_file,
+    'o|output_file=s'   => \$output_file,
+    'h|help'            => \$help,
+);
+
+( defined($input_file) && ( -e $input_file ) && !$help ) or die <<USAGE;
+Usage: lookup_accession_metadata [options]
+Take in a list of accession numbers and lookup the metadata in EMBL
+
+# Create 1 evolved genome
+lookup_accession_metadata -i list_of_accession_numbers
+
+# This help message
+lookup_accession_metadata -h
+
+USAGE
+
+$output_file ||= 'lookup_accessions.csv';
+
+my $input_file_parser = Bio::Resistome::Input::FileOnePerLine->new(filename => $input_file);
+my $accessions_obj = Bio::Resistome::Accessions->new(accession_numbers => $input_file_parser->file_line_data);
+
+my $spreadsheet_row_obj = Bio::Resistome::Spreadsheet::LookupAccessions->new(
+  genes_metadata => $accessions_obj->accessions_metadata,
+  output_file_name => $output_file
+);
+$spreadsheet_row_obj->create;
+

@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT request="DQ018710&amp;display=xml"><entry accession="DQ018710" version="1" entryVersion="2" dataClass="STD" taxonomicDivision="PRO" moleculeType="genomic DNA" sequenceLength="9537" topology="linear" firstPublic="2005-05-31" firstPublicRelease="84" lastUpdated="2005-09-30" lastUpdatedRelease="85">
+	<description>Paenibacillus thiaminolyticus strain PT-2B1 putative transposase and putative GNAT family acetyltransferase genes, complete cds; and glycopeptide resistance vanA operon, partial sequence.</description>
+	<reference type="article" number="1" location="1-9537">
+		<title>Glycopeptide resistance vanA operons in Paenibacillus strains isolated from soil</title>
+		<author>Guardabassi L.</author>
+		<author>Perichon B.</author>
+		<author>Van Heijenoort J.</author>
+		<author>Blanot D.</author>
+		<author>Courvalin P.</author>
+		<journal>Antimicrob. Agents Chemother.</journal>
+		<year>2005</year>
+		<volume>49</volume>
+		<issue>10</issue>
+		<firstPage>4227</firstPage>
+		<lastPage>4233</lastPage>
+		<referenceLocation>
+Antimicrob. Agents Chemother. 49(10):4227-4233(2005).
+		</referenceLocation>
+		<xref db="DOI" id="10.1128/AAC.49.10.4227-4233.2005"/>
+		<xref db="PUBMED" id="16189102"/>
+	</reference>
+	<reference type="submission" number="2" location="1-9537">
+		<author>Guardabassi L.</author>
+		<author>Perichon B.</author>
+		<author>Van Heijenoort J.</author>
+		<author>Blanot D.</author>
+		<author>Courvalin P.</author>
+		<submissionDate>2005-04-26</submissionDate>
+		<referenceLocation>
+Submitted (26-APR-2005) to the INSDC.
+Unite des Agents Antibacteriens, Institut Pasteur, 25 rue du Docteur Roux, Paris
+75015, France
+		</referenceLocation>
+	</reference>
+	<feature name="source" location="1..9537">
+		<taxon scientificName="Paenibacillus thiaminolyticus" taxId="49283">
+			<lineage>
+				<taxon scientificName="Bacteria"/>
+				<taxon scientificName="Firmicutes"/>
+				<taxon scientificName="Bacilli"/>
+				<taxon scientificName="Bacillales"/>
+				<taxon scientificName="Paenibacillaceae"/>
+				<taxon scientificName="Paenibacillus"/>
+			</lineage>
+		</taxon>
+		<qualifier name="organism">
+			<value>
+Paenibacillus thiaminolyticus
+			</value>
+		</qualifier>
+		<qualifier name="strain">
+			<value>
+PT-2B1
+			</value>
+		</qualifier>
+		<qualifier name="isolation_source">
+			<value>
+soil
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="1..1263">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+putative transposase
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+Orf1; similar to putative transposase in Lactococcus lactis
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAY52000.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MKTTLRPSKIKEILSNNIKSMAAIPDDYVRRPGHDFSRNRKLTFETMLQMLIGMGGNSLCKELYEWFSFSKDTASVSAFV
+QQREKILPSAIETLFHRFVASCDESVLFNGYRLFAVDGTDLRLPTNPNDSESYMKNESNTKGYNLVHIDAMYDLMRHVYV
+DASVQPKKGMNEHKALVSMVDRSNYSGKVIVIADRGYESFNNIAHFQEKSWNYIIRSKESYGIISKLAVPDQAEFDIQVT
+LSLTRRQTKQTLSLLKKDPVRYRWIQPHTTFDYLYPKDDRLYDLCFRVVRFAISDVSYETVFTNLDSGNFPPDTIKELYN
+RRWGIETSFRELKYAVGLVNLHSKKPSSMLQEVFSRFILYNFSALIAHQAQIPNEATKRINFSAAMLICRQYFRDKLSED
+SLLDLIAKHLSLIRKGRKFP
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="2120..2524">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+putative GNAT family acetyltransferase
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+Orf2; similar to GNAT acetyltransferase in Bacillus cereus
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAY52001.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MTTPLTYTVFLEEKKSSSVQQDNRWGLFVNDKLIGIVSYYWEHQASNWLEAGLPIYNYDFWNGGYGTLFFKAWIDHLFKS
+LPLVRVGFTTWSGNQRMMRLGEKLGMKLEGRLRKCRLVNGKYYDSIRMGILREE
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="operon" location="3048..&gt;9537">
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="gene" location="3048..3743">
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanR
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="3048..3743">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanR
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+VanR
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+response regulator
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAY52002.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MSDKILVVDDEHEIADLVELYLKNENYTVFKYYTAKEALECIDKTDLDLAILDIMLPGASGLAICQKIRDKHTYPIIMLT
+AKDTEVDKITGLTIGADDYITKSFRPLELIARVKAQLRRYKKYSGVAEQNENVIVHSGLVININTHECFLNEKQLSLTPT
+EFSILRILCENKGNVVSSEQLFHEIWGDEYFSKSNNTITVHIRHLREKMNDTIDNPKYIKTVWGVGYKIEK
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="gene" location="3721..4881">
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanS
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="3721..4881">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanS
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+VanS
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+sensor histidine kinase
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAY52003.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MAIKLKNKNKKTDYSKLKRKLYQYIVVIVMAAVVFVLFLRLFIKGTLGEWIVRFLENSYHLERQDAMKIYQYTIRNNIEI
+FIYVAIAISILILCRVMLSKFAKYFDEINTGIDILIQNEDKQIELSAEMEFMEQKLNTLKRTLEKREQDAKLAEQRKNDV
+VMYLAHDIKTPLTSVIGYLSLLDEAPDMPVEQKAKYVHITLDKAYRLEQLIDEFFEITRYNLQTITLTKKHIDLYYMLVQ
+MTDEFYPQLAANGKQAVIHASEDLTVSGDPDKLARVFNNILKNAAAYSEDNSVIDITAGLSGDVVSIVFKNAGSIPKDKL
+AAIFEKFYRLDDARSSDTGGAGLGLAIAKEIIVQHGGQIYAESNDNYTTFTVELPALPDLVDKRSS
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="gene" location="5109..6077">
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanH
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="5109..6077">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanH
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+VanH
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+dehydrogenase
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAY52004.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MKNIGITVYGCEQDEADAFRALSPRFGIMPTIINAAVSEANAISAPCNQCISVGHKSEVSASILLALKRAGVKYISTRSI
+GCNHIDTTAAKRMGIAVGNVAYSPDSVADYTMMLMLMAVRNAKSIVRSVEKHDFRLDSVRGKVLRDMTVGVVGTGHIGKA
+VIERLRGFGCHVLAYDRSQKIEANYVPFDALLQNSDIVTLHVPLNADTRHIIGHEQIKRMKQGAFIINTGRGPLVDTDAL
+VKALENGKLGGAALDVLEGEEEFFYSDCSQKPIDNQFLLKLQRMPNVIITPHTAYYTEQALRDTVEKTIKNCLDFERSQE
+HE
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="gene" location="6070..7101">
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanA
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="6070..7101">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanA
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+VanA
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+D-Ala:D-Lac ligase
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAY52005.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MNRVKVAILFGGCSEEHDVSVKSAREIAANIDNEKYEPLYIGITKFGVWKMCEKPCAEWENSNCYSAVLSPDKKMHGLLV
+KKNHEYEIHHVDVAFSVLHGKSGEDGSIQGLFELSGIPYVGCDIQSSAICMDKSLTYTIAKNAGIATPDFWVINKDDKPA
+IDAFTYPVFVKPARSGSSYGVKKVNGADELDAAIESARQYDSKILIEQAVLGCEVGCAVLGNSSELIVGEVDQIRLQHGI
+FRIHQEAEPEKGSENAVITIPADLSVEVRGRIQETAKKIYKALGCRGLSRVDMFLQDNGSIVLNEVNTLPGFTSYSRYPR
+MMVAAGITLPELIDRLIVLALKG
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="gene" location="7107..7715">
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanX
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="7107..7715">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanX
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+VanX
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+D,D-dipeptidase
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAY52006.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MKIGFTFLDEILHGVRWDAKYATWDNFTGKPVDGYEVNRIVGTYELADALLKVKELAATQGYGLLLWDGYRPQRAVNCFL
+QWAAQPEDDLTKERYYPNIDRTEMVSKGYVASKSSHSRGSAIDLTLYRLDTGELVPMGSGFDFMDERSHHAAKGISGNEA
+QNRRRLRSIMEDSGFEAYSFEWWHYVLRNEPYPNSYFDFPVK
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="gene" location="8162..9046">
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanY
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="8162..9046">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanY
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+VanY
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+D,D-carboxypeptidase
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAY52007.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MKKWGFLLLLCLGFVFINKALFFQEKVEIQNYDQNPKDHLDNRGTSESTQTKTITNEQIYQGNLLLFNSKYPVRQESVKS
+DIVNLSKHNELINGYGLLDTNIYMSKGIAQKFSEMVNDAVKEGVSHFIINSGYRDFDEQSVLYQEMGADYALPAGYSEHN
+SGLSLDVGSSLTKMERAPEGKWLKENAWKYGFILRYPKDKTDVTGIQYEPWHIRYVGFPHSAIMKEKNFALEEYMDFLKE
+QKSITTTIDHQVYKIFYYPISQNTTIHVPANGQYEISGNNMDGVIVTVYSGKRD
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="gene" location="9108..&gt;9537">
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanZ
+			</value>
+		</qualifier>
+	</feature>
+	<feature name="CDS" location="9108..&gt;9537">
+		<qualifier name="codon_start">
+			<value>
+1
+			</value>
+		</qualifier>
+		<qualifier name="transl_table">
+			<value>
+11
+			</value>
+		</qualifier>
+		<qualifier name="operon">
+			<value>
+glycopeptide resistance vanA
+			</value>
+		</qualifier>
+		<qualifier name="gene">
+			<value>
+vanZ
+			</value>
+		</qualifier>
+		<qualifier name="product">
+			<value>
+VanZ
+			</value>
+		</qualifier>
+		<qualifier name="note">
+			<value>
+teicoplanin resistance protein
+			</value>
+		</qualifier>
+		<qualifier name="protein_id">
+			<value>
+AAY52008.1
+			</value>
+		</qualifier>
+		<qualifier name="translation">
+			<value>
+MGCSGFFSSYMYALFKIIVLKFGPTVVEFLWVRLMRNSTNPECIAARLHAGNLIPLKEISRASDSMSGHSLLNLFGNVGI
+FVPLGIFLGVLAKSGKLTLAGSSLVLECTQVLFSIGKFDVDDLILNSTGGSIGFVVYALCARL
+			</value>
+		</qualifier>
+	</feature>
+	<sequence>
+atgaaaacgacgcttagaccttcaaaaatcaaggaaattttatcaaacaatatcaaatca
+atggcagctataccggatgactatgttaggagacctggtcacgacttttcaagaaaccga
+aaactaactttcgagactatgcttcaaatgctaatcggtatgggagggaatagcctttgt
+aaggaactctacgaatggttttctttttctaaagatacagcatcggtttcagcctttgtc
+caacaacgcgaaaaaatattgccaagcgctatagaaaccttattccacagatttgttgca
+tcatgcgatgaaagcgtgttgtttaatgggtatcgcttatttgcagtagatggtactgac
+ttacgactgcctacaaatccaaacgattcagaatcgtacatgaaaaatgagagcaatact
+aaggggtataatttagtccatattgacgccatgtatgatttgatgcggcatgtttatgta
+gatgcgtctgtccaaccgaaaaaagggatgaacgaacacaaagcccttgtctctatggta
+gatcgatctaattattcaggaaaagtcatagttatagcagaccgaggctatgaatctttt
+aataatatagcccattttcaggaaaaatcatggaattacattatacgttcaaaggagtct
+tacggaatcatttctaagttagctgtaccagaccaggccgagtttgatattcaagtcaca
+ctgtcgctaacaagacgacaaactaagcaaaccttgtccttgttgaaaaaagaccctgtc
+cgatatcgttggatacagccacatacaacatttgattatctttatccaaaagatgatcgc
+ctatacgatttgtgcttcagagttgtccgctttgccatttctgatgtatcgtatgaaacg
+gtttttacaaatttagattccgggaatttcccgcctgatacaattaaagaactctacaat
+aggcgttggggcatagagacctctttccgagaactcaaatatgctgtagggttagtgaac
+ctacatagtaaaaagccgagttccatgctacaagaagtattttctcgtttcatcctttac
+aacttctctgccttaattgcacatcaagcacagattcccaatgaagcaaccaagcgaatc
+aacttctcggctgcgatgcttatttgtaggcaatattttagggataaactctcagaagat
+agtcttcttgatctgattgcaaaacatctatctctaatacggaaaggcagaaaattcccg
+tgattccaaaacccaatatctgctgttgggtttacctgtagggtatcatagacaactcca
+agttgagagtgactacgtcacagatgcaggtagtgcatctgtatttgtcatgccagaaat
+ataaaattagcggacgactaagcttatagtcattcaccaattttacatccgcaggtcatt
+actctattaacttaatgacattggtctggaaggagcaggggtaccggaaacttgctattg
+ggtggtacgcagccggcttggctggaggagcctgtttttcgccctagaagtcatctagat
+cggctagaacaaataaaaaaattgcaactcgataatcacgaaaaaattgaaacgaataga
+agcttgatcacaagaaacaccggagcgatcccgggtttcttttttcaaatcccccaccat
+gtgtttttattaatttatctgcgtgtacataattattttattgtagataaatagacggat
+gttaacggataattttgtacagaaatttcccagtggaccttttgttaatctatgtcgtta
+aagggcacaacattgcggaatagggaatttagaaatataatgaagatacccttaaagcat
+gctaaaagttctttgtggttattatcagggtggtttattggttggtttatcttatttctg
+ttagaattgccattatcatttttaaacttattcattgtagctaagcaatgaatattctgt
+aaaagagattatagaaggaactggcatttcgcaaggctctttataccgagctatccagaa
+acgaaccctagaaaccccatagctaatcagtttaattccattttatataaatgatgtgac
+ggactagagcagcaaccctgtgactacccctttaacatacactgtttttcttgaagaaaa
+gaaatcgtcttctgtacaacaagataaccgttgggggttatttgttaatgataaattgat
+tggtatagtatcgtattattgggaacatcaggcttcgaattggttagaagctgggcttcc
+tatatataactatgatttttggaacggtggatatggaacactcttttttaaagcttggat
+agaccatttatttaaatctttgcctttagtaagagtaggtttcacaacatggtcagggaa
+tcagcgtatgatgcgtttaggtgagaagttgggaatgaagttagaaggaagactaagaaa
+gtgtagactggttaacggtaaatattatgactccattagaatgggaatattgagagaaga
+gtaggaacacctaaaaacaaataattaaaactttaatgcacttgggtagtgcattaaagt
+tgcataaaaccctaatagatatatgcaacttctaggacttcttccaaagccaaaaacgtt
+gacttataggcgttgtataaaattctgcataaacgtttaatgcagacatgctgaaacccc
+ttgggtgccaaggggttttgtgtttcggaacttccgaaaatttttcattatgtaaactgg
+atttgtatagagtattcatccaagaaagttttttgtaacaaataaataacatttacaaaa
+aatactttttaaaatgactttttattacaatagactcatataggaaaattgacacaatga
+gagcgaaaactacattgagcaaattaacactacaagaattagaatcacatttatggaaat
+cagcggatatcctacgtggataagcggattccagtgattataaatactatatattcgtaa
+aagattccgattgagaaaagcaaatccataaaggagagttgataactatgagcgataaaa
+tacttgttgtggacgatgaacatgaaattgccgatttggttgagctatacttgaaaaacg
+agaattatacggttttcaaatactataccgccaaagaagcgttggaatgtatagacaaga
+ccgatcttgaccttgccatattggacatcatgcttcccggcgcaagcggcctcgctatct
+gccaaaagataagggacaagcacacctatccaattatcatgctgaccgcgaaagatacgg
+aggtagataaaattacagggctaacaatcggcgcggacgattatataacgaagtcctttc
+gcccgctggagttaattgcgagggtcaaggcgcagttgcgccgatacaaaaaatacagtg
+gagtagcggagcagaacgaaaatgttatcgtccactccggccttgtcattaatataaaca
+cgcatgagtgttttctgaacgagaagcagttatcactcactcccaccgagttttcaatcc
+tgcgcatcctctgtgaaaacaaggggaatgtggttagctccgagcagttatttcatgaga
+tatggggcgacgaatatttcagcaagagcaacaacaccatcaccgtgcatatccggcatc
+tgcgcgaaaaaatgaacgacaccattgataatccgaagtatataaaaacggtatgggggg
+ttggctataaaattgaaaaataagaataaaaaaaccgattattccaaactaaaacgaaaa
+ctctaccagtatatcgttgtgattgttatggcagcagttgtattcgtgttgtttttgcgt
+ttatttatcaaggggacacttggggagtggatcgtacgttttttggaaaacagttatcac
+ttagagcgtcaggacgcgatgaaaatatatcagtatactatacggaacaatatagaaatc
+tttatttatgtggcgattgccattagtattcttattctatgccgcgtcatgctttcaaaa
+tttgcaaaatactttgacgagataaataccggcattgatatacttattcagaacgaagat
+aaacaaattgagctttctgcggaaatggagttcatggaacagaagctcaacacattaaaa
+cggactctggaaaagcgagagcaggatgcaaagctggccgaacaaagaaaaaatgacgtt
+gttatgtacttggcgcacgatattaaaacgccccttacatccgttatcggttatctgagc
+ctgcttgacgaggcgccagacatgccggtagagcaaaaggcaaagtatgtgcatatcacg
+ttggacaaagcgtatcgcctcgaacagctaatcgacgagttttttgagattacacggtat
+aacctccaaacgattacgctcacgaaaaagcacatagacctatactatatgctggtgcag
+atgaccgatgaattttatccccagcttgccgcgaatggaaaacaggcggttatccatgct
+tccgaggatttgaccgtatccggcgaccccgataagctggcgagggtctttaacaacatt
+ttgaaaaacgccgctgcatacagcgaggacaacagcgtcattgacattacggcgggcctc
+tccggggatgtggtgtccatcgttttcaagaacgccggaagcatccccaaagataagctc
+gctgccatatttgaaaagttttacaggctggacgatgcccgttcttccgatacgggcggc
+gcgggacttggattggcgattgcaaaagaaatcattgttcagcatggcgggcagatttac
+gcggaaagcaatgataactacacgacgttcacggtagagcttccggccttgccagacttg
+gttgataaaaggagttcctaagaaatgaacatcgtttcttaggaaaatctcaaggtcatc
+tttactttttcttaggaaattaacaatttaatattaaaaaacggctcgttcttacgcggt
+agacttaaaaccgtaagaacgagcttttttcgtttctccagagaaggatatgacaagttt
+accgcgatcatcggcatccccgttttatttcttattggtgcctttcgaagaaaggaatgg
+tcttaattatgaaaaacatcggcattaccgtttatggatgcgagcaggatgaggcagatg
+cattccgtgccctttcgccgcgctttggcattatgcccacgataattaacgccgccgtgt
+cagaagccaacgccatatcagccccctgcaatcaatgtatcagcgtgggacacaaatccg
+aggtttccgcgtctattcttcttgcgctgaagagagccggcgtgaaatatatctctaccc
+gaagcatcggctgcaatcatatagatacaactgccgctaagagaatgggcatcgctgtcg
+gcaatgtggcgtattcgccggatagcgttgccgattataccatgatgctgatgcttatgg
+cagtacgcaacgccaaatctattgtgcgctctgtggaaaaacatgatttcaggctggaca
+gtgtccgtggcaaggtactgcgcgacatgacagtcggcgtggtgggaaccggccatatag
+gcaaagcggttattgagcggctgcggggatttggatgtcatgtgctggcttatgatcgca
+gccaaaaaatagaggcaaactatgttccgtttgatgcgttgttgcaaaatagcgatatcg
+ttacgcttcatgtgccgctcaatgcggatacgcgccatatcatcggccacgaacaaataa
+agagaatgaagcaaggcgcgtttattatcaatactgggcgcggtccacttgtagataccg
+atgcgctggttaaagcattagaaaacggaaaactgggcggtgccgcattggatgtattgg
+agggagaggaagagtttttctactctgattgctcacaaaaaccaattgataatcaatttt
+tactgaaacttcaaagaatgccgaacgtgataatcacgccgcatacggcttactataccg
+aacaggcgttgcgtgataccgttgaaaaaacaattaaaaactgtttggattttgaaagga
+gccaggagcatgaatagagtaaaagttgcaatcctgtttgggggttgctcggaggagcat
+gacgtttcggttaaatctgcaagagagattgccgctaacattgacaacgaaaaatacgag
+ccgttatacattggaattacgaaattcggtgtttggaaaatgtgcgaaaaaccgtgcgcg
+gaatgggaaaacagcaattgctattcagccgtactctcgccggataaaaaaatgcacggt
+ttgcttgttaaaaagaaccatgaatatgaaatccaccacgttgatgtagcattttcggtt
+ttgcacggcaagtcgggtgaagatggatcaatacaaggtctgtttgaattgtccggtatc
+ccctatgtgggctgcgatattcaaagctccgcgatttgtatggacaaatcgctgacatac
+acaattgcgaaaaacgctggcatagctactcctgatttttgggttattaataaagacgat
+aagccggcgatagatgcgtttacctatcctgtttttgttaagccggcgcgttcaggctca
+tcttatggcgtgaaaaaagtcaatggcgcagacgaattggacgccgcaattgaatcggca
+agacaatatgacagcaaaatcttaattgagcaggctgttttgggctgtgaggtcggttgt
+gccgtattgggaaacagttccgagttgattgttggcgaggtggaccaaatcaggctgcag
+cacggtatctttcgtattcatcaggaagccgagccggaaaaaggctctgaaaacgcagtt
+ataaccattcccgcagacctgtcggtagaggtgcgaggacggatacaggaaacggcaaaa
+aaaatatataaggcgctcggttgtagaggtctttcccgtgttgatatgtttttacaagat
+aacggcagcattgtacttaacgaagtcaataccctgcctggtttcacgtcatacagccgt
+tatccccgtatgatggtcgctgcaggtataacgcttcccgaactgattgaccgcctgatc
+gtattagcattaaagggatgataagaatgaaaataggatttacttttttagatgaaatat
+tacacggtgttcgttgggacgctaaatatgccacatgggacaatttcaccggaaagccgg
+ttgacggatatgaagtaaatcgcattgtaggaacatacgagttggccgacgcgcttttga
+aggtaaaagaactggctgctactcaagggtacggattgcttctatgggacggttaccgtc
+cccaacgcgctgtaaactgttttttgcaatgggctgcacagccggaagatgacctgacaa
+aggaaagatattatcccaatattgaccgaaccgagatggtttcaaaaggatacgtggctt
+caaaatcaagccatagccgcggaagtgcaattgatcttacgctttatcgattagacacgg
+gtgagctggtaccaatggggagcggatttgattttatggatgaacgctctcatcatgcgg
+caaaaggaatttcaggcaatgaagcgcaaaatcgcagacgtttgcgttccatcatggaag
+acagtgggtttgaagcatatagcttcgaatggtggcactatgtattaagaaacgaaccat
+accccaacagctattttgatttccccgttaaataaacttttaaccgttgcacggacaacc
+tatataaagctatctctttcggcagagaatccgtcgtttgcaactggtttgtagggaatt
+tatatatagtagatagttatgaagatgtaagcagggcgatattgcggtcattatctgcgg
+gcgctgcggcaagatgagcctgaaaaacaagactgaacgaatagatgggcggtattccac
+accgcccgtttgctccgcccattgtcaacaggcggttcagccttgttacatcagcatggg
+tatcaacttatgaaaattcacctaccatgtagttggatgtacgaaatatttctctaatct
+tccccctaaccgcctcaatatctcgtttgagattgtgcctgtttgctctccgcaatttca
+caggcagttatttcgccccgccggatttgctattatcgccaagttaaggaggaaactgat
+aatgaagaagtggggttttttattgttattgtgcttaggttttgtcttcattaataaagc
+actgttttttcaggaaaaagtagaaattcaaaattatgatcaaaatcccaaagatcattt
+agataatagagggacttctgaaagtacgcaaacgaagacgattacaaatgaacagattta
+tcaaggaaatctgctattattcaacagtaaatatcctgttcgccaagaaagtgtgaagtc
+agatatcgtaaatttatctaaacataacgaattgataaatgggtacgggttgcttgatac
+gaatatttatatgtcaaaaggaatagcacaaaaattttcagagatggtcaatgatgctgt
+aaaggaaggggttagtcattttattattaatagtggctatcgtgactttgatgagcaaag
+tgtgctttaccaagaaatgggggctgattatgccttgccagcaggttatagtgaacataa
+ttcaggcttatcacttgatgtaggatcaagcttaacgaaaatggagcgagcacctgaagg
+aaagtggctgaaagaaaatgcttggaaatacggctttatattacgctatccaaaggataa
+aactgatgttactggaattcaatatgaaccatggcatatccgttatgttggtttccctca
+cagcgcgattatgaaagaaaagaatttcgctctagaagaatatatggattttttgaagga
+acagaagtccattacgactacaatagaccaccaagtctataaaatcttttactatcctat
+ctcccaaaatacaacgatccatgtgcctgcgaatggccagtatgaaatttcaggcaacaa
+tatggatggcgtgattgtgacagtgtattctggtaagcgagactaagttccgacggacga
+ggctcgggcggagaggaacggatgaacggcggaagcaggttgaagaattgggttgttcag
+gatttttttcctcctatatgtacgcattattcaaaatcatcgtgctcaagtttggcccga
+cagtcgtcgagtttctatgggtacggctaatgcgaaactcgaccaacccggaatgtattg
+ccgcccggctgcatgccggcaatctgatccctttgaaggaaatttccagggcgagtgatt
+cgatgtcggggcacagccttttgaacttgtttggaaatgttgggatcttcgtccctttag
+gcattttcctcggtgttctggcgaaatccggcaaactgacgttggcagggtcgagtctcg
+tgttagaatgtacacaagttttattttcgatcggaaaattcgacgtcgacgacctcattt
+tgaattccaccggaggctcaatcggttttgtcgtttatgcactgtgcgctaggctga
+	</sequence>
+</entry>
+</ROOT>
