@@ -34,7 +34,7 @@ has 'genes_metadata' => ( is => 'ro', isa => 'ArrayRef[Bio::Resistome::GeneMetaD
 sub populate
 {
   my ($self) = @_;
-  for $gene_metadata (@{$self->genes_metadata})
+  for my $gene_metadata (@{$self->genes_metadata})
   {
     my $populate_gene = Bio::Resistome::Database::PopulateGene->new(
       dbh => $self->dbh,
